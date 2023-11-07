@@ -13,10 +13,10 @@
 /*Functions samples */
 void shell(void);
 char *_getline(void);
-char **pase_line(char *);
+char **paser_line(char *);
 int _getchar(void);
-void *_relloc(void *, unsigned int, unsigned int);
-char *_udicpy(char *, char *, unsigned int);
+void *_realloc(void *, unsigned int, unsigned int);
+char *_memcpy(char *, char *, unsigned int);
 char **strt(char *);
 int _straff(char *);
 #endif
