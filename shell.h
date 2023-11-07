@@ -1,6 +1,5 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -12,18 +11,21 @@
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
-
-
 /* Operators */
 #define BUFF_SIZE 1024
 #define TOKEN_SIZE 64
-#define DELIMITERS \
+#define BUF_FLUSH -1
+#define SEPARATORS \
 {\
-";", "#", "&&", "||" \
+"&&", "||", "#", ";" \
 }
-
-
 /*Functions samples */
+char *_memset(char *, char, unsigned int);
+void free(char **);
+void *_realloc(void *, unsigned int, unsigned int);
+int _strcmp(char *, char *);
+char *starts_with(const char *, const char *);
+char *_strcat(char *, char *);
 void shell(void);
 char *_getline(void);
 char **parse_line(char *);

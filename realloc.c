@@ -14,7 +14,7 @@ s[i] = b;
 return (s);
 }
 /**
- * ffree - frees a string of strings
+ * ffree - frees strings
  * @pp: strings
  */
 void ffree(char **pp)
@@ -27,9 +27,9 @@ free(*pp++);
 free(a);
 }
 /**
- * _realloc - reallocates a block of memory
- * @ptr: pointer to previous malloc'ated block
- * @old_size: byte size of previous block
+ * _realloc - reallocates memory blocks
+ * @ptr: pointer to previous block
+ * @old_size: byte size of old block
  * @new_size: byte size of new block
  *
  * Return: pointer to da ol'block nameen.
