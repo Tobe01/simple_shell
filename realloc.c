@@ -14,10 +14,10 @@ s[i] = b;
 return (s);
 }
 /**
- * ffree - frees strings
+ * free - frees strings
  * @pp: strings
  */
-void ffree(char **pp)
+void free(char **pp)
 {
 char **a = pp;
 if (!pp)
