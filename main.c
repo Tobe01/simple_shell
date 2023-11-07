@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * main - entry point
  * @ac: indicates arg count
@@ -9,7 +8,7 @@
  */
 int main(void)
 {
-shell()
+shell();
 populate_env_list(info);
 read_history(info);
 hsh(info);

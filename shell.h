@@ -15,13 +15,16 @@
 #define BUFF_SIZE 1024
 #define TOKEN_SIZE 64
 #define BUF_FLUSH -1
+#define INFO_INIT \
+{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
+0, 0, 0}
 #define SEPARATORS \
 {\
 "&&", "||", "#", ";" \
 }
 /*Functions samples */
 char *_memset(char *, char, unsigned int);
-void free(char **);
+void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
