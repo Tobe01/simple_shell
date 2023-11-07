@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <string.h>
 
 /* Buffers */
 #define BUFF_SIZE 1024
@@ -19,4 +20,6 @@ void *_realloc(void *, unsigned int, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
 char **strt(char *);
 int _straff(char *);
+void TJ_print(const char *string);
+
 #endif
