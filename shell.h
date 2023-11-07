@@ -6,20 +6,32 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <limits.h>
+#include <fcntl.h>
+#include <errno.h>
 
-/* Buffers */
+
+/* Operators */
 #define BUFF_SIZE 1024
 #define TOKEN_SIZE 64
+#define DELIMITERS \
+{\
+";", "#", "&&", "||" \
+}
+
 
 /*Functions samples */
 void shell(void);
 char *_getline(void);
-char **paser_line(char *);
+char **parse_line(char *);
 int _getchar(void);
 void *_realloc(void *, unsigned int, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
-char **strt(char *);
-int _straff(char *);
+char **strtow(char *);
+char **strtow2(char *, char);
+int _strlen(char *);
 void TJ_print(const char *string);
-
 #endif
