@@ -8,10 +8,6 @@
  */
 int main(void)
 {
-shell();
-populate_env_list(info);
-read_history(info);
-hsh(info);
 return (EXIT_SUCCESS);
 }
 
