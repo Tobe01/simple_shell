@@ -33,7 +33,6 @@ void shell(void);
 char *_getline(void);
 char **parse_line(char *);
 int _getchar(void);
-void *_realloc(void *, unsigned int, unsigned int);
 char *_memcpy(char *, char *, unsigned int);
 char **strtow(char *);
 char **strtow2(char *, char);
