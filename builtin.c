@@ -3,6 +3,9 @@
  * _customexit - exits the shell
  * @info: Structure containing potential arguments.
  * Return: exits with a given exit status
+ * filename: name of file to be processed
+ * s: just a function
+ * stat: just status
  *(0) if info.argv[0] != "exit"
  */
 int _customexit(char **s, char *filename, int stat)
