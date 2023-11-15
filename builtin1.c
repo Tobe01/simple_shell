@@ -1,11 +1,11 @@
 #include "shell.h"
 /**
- * mycustom_dir - changes the current working directory
+ * change_directory - changes the current working directory
  * @path: path to change to (NULL if no path)
  * @filename: name of file
  * Return: 0 on success, -1 on failure
  */
-int custom_dir(char *path, char *filename)
+int change_directory(char *path, char *filename)
 {
 char *oldpwd = _getenv("OLDPWD");
 char *pwd = getcwd(NULL, 0), *home = _getenv("HOME");

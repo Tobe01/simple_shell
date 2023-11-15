@@ -1,18 +1,16 @@
-#ifndef __SHELL__
-#define __SHELL__
-//libraries
+#ifndef _SHELL_H_
+#define _SHELL_H_
+//Libraries
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
+#include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <signal.h>
-#include <sys/stat.h>
-#include <dirent.h>
-#include <stdarg.h>
 //variables
 extern char **environ;
 //macros
@@ -50,7 +48,7 @@ int change_directory(char *path, char *filename);
 int _prepenv(char *name, char *value, int overwrite);
 int _unprepenv(char *name);
 /* helper function protoypes*/
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void *realloc_(void *ptr, unsigned int old_size, unsigned int new_size);
 char **strtow(char *str, char delim);
 int _strlen(char *s);
 void free_array(char **);

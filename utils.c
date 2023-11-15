@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
- * _getchar - reads a character from stdin
+ * getchar_ - reads a character from stdin
  * Return: character
  */
-int _getchar(void)
+int getchar_(void)
 {
 char c;
 if (read(STDIN_FILENO, &c, 1) == 1)
@@ -12,13 +12,13 @@ else
 return (EOF);
 }
 /**
- * _realloc - reallocates memory block
+ * realloc_ - reallocates memory block
  * @old_size: old size memory block
  * @new_size: new size memory block
  * @ptr: pointer to memory block
  * Return: void pointer
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *realloc_(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 void *new_block;
 if (new_size == old_size)
