@@ -37,8 +37,8 @@ cd_error_handler(filename, path);
 return (-1);
 }
 }
-_setenv("OLDPWD", pwd, 1);
-_setenv("PWD", getcwd(NULL, 0), 1);
+_getenv("OLDPWD", pwd, 1);
+_getenv("PWD", getcwd(NULL, 0), 1);
 free(pwd);
 return (0);
 }

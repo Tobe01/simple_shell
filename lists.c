@@ -7,7 +7,7 @@
  *
  * Return: pointer to node
  */
-lst_node *add_node(list_t **head, char *lst)
+lst_node *add_node(lst_node **head, char *lst)
 {
 lst_node *new_node;
 if (lst == NULL)

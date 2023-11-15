@@ -33,19 +33,19 @@ return (malloc(new_size));
 new_block = malloc(new_size);
 if (new_block == NULL)
 return (NULL);
-_memcpy(new_block, ptr, old_size);
+memcpy(new_block, ptr, old_size);
 free(ptr);
 return (new_block);
 }
 /**
- * _memcpy -  function that copies memory area.
+ * memcpy -  function that copies memory area.
  * @dest: destination
  * @src: source
  * @n: buffer size
  *
  * Return: pointer to dest
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *memcpy(char *dest, char *src, unsigned int n)
 {
 unsigned int i = 0;
 for (; i < n; i++)

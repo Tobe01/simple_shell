@@ -8,28 +8,28 @@ char *_getline(void)
 int buffsize = BUFF_SIZE;
 int index = 0, c;
 char *buff = (char *)malloc(sizeof(char) * buffsize);
-if (!buffer)
+if (!buff)
 {
 perror("Unable to allocate buffer");
 exit(EXIT_FAILURE);
 }
 while (1)
 {
-c = _getchar();
+c = getchar();
 if (c == EOF || c == '\n')
 {
-buffer[index] = '\0';
-return (buffer);
+buff[index] = '\0';
+return (buff);
 }
 else
-buffer[index] = c;
+buff[index] = c;
 index++;
 if (index >= buffsize)
 {
 int oldsize = buffsize;
 buffsize += BUFF_SIZE;
-buffer = _realloc(buffer, oldsize, buffsize);
-if (!buffer)
+buff = realloc(buffer, oldsize, buffsize);
+if (!buff)
 {
 perror("Unable to allocate buffer");
 exit(EXIT_FAILURE);

@@ -2,17 +2,17 @@
 /**
  * main - entry point
  * @ac: indicates arg count
- * @av: indicates arg vector
+ * @arv: indicates arg vector
  *
  * Return: 0 on success,and 1 on error
  */
-int main(int ac, char *av[])
+int main(int ac, char *arv[])
 {
-if (argc == 2)
+if (ac == 2)
 {
-return (handle_file(argv[1], argv[0]));
+return (handle_file(arv[1], arv[0]));
 }
 else
-return (shell(argv[0]));
+return (shell(arv[0]));
 }
 

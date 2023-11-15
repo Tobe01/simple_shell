@@ -1,6 +1,6 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
-//Libraries
+/* Libraries */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,9 +11,9 @@
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
-//variables
+/* variables */
 extern char **environ;
-//macros
+/* macros */
 #define BUFF_SIZE 100
 #define MAX_BUFF_SIZE 1024
 /**
@@ -28,7 +28,7 @@ typedef struct node
 char *lst;
 struct node *next;
 } lst_node;
-//Templates
+/* Templates */
 int shell(char *);
 char *read_line(void);
 int parse_line(char *line, char *, int);
@@ -39,7 +39,7 @@ int handle_comment(char *line, char *filename, int status_code);
 int handle_semi(char *line, char *filename, int status);
 int handle_and(char *line, char *filename, int status);
 int handle_or(char *line, char *filename, int status);
-/* fucntion templates for builtin*/
+/* fucntion templates for builtin */
 int customexit(char **, char *, int);
 int custom_env(void);
 int custom_echo(char **arg);
@@ -47,7 +47,7 @@ int check_for_builtin(char **args, char *, int);
 int change_directory(char *path, char *filename);
 int _prepenv(char *name, char *value, int overwrite);
 int _unprepenv(char *name);
-/* helper function protoypes*/
+/* helper function protoypes */
 void *realloc_(void *ptr, unsigned int old_size, unsigned int new_size);
 char **strtow(char *str, char delim);
 int _strlen(char *s);
@@ -62,16 +62,16 @@ char *_strdup(char *str);
 char *convert_unsigned_int(unsigned int num);
 char *_strncpy(char *dest, char *src, int n);
 char *replace_string(char *original, char *pattern, char *replacement);
-void free_arr_list(char **arr, dir_node *list);
+void free_arr_list(char **arr, lst_node *list);
 void free_strings(int count, ...);
-void create_path(char *full_command, dir_node *current, struct dirent *entry);
+void create_path(char *full_command, lst_node *current, struct dirent *entry);
 int update_env(char *name, char *value, int fount_idx);
 int create_env(char *name, char *value, int size);
 char *__strstr(char *hay, char *needle);
 /** linked list functions */
 void insertNode(lst_node **head, char *lst);
 lst_node *add_node(char *lst);
-void free_list(dir_node *head);
+void free_list(lst_node *head);
 char *check_path(lst_node *head, char *args);
 char *check_for_access(char *args);
 /* file handlers*/

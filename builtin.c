@@ -1,14 +1,13 @@
 #include "shell.h"
-
 /**
  * _customexit - exits the shell
  * @info: Structure containing potential arguments.
  * Return: exits with a given exit status
  *(0) if info.argv[0] != "exit"
  */
-int _customexit(char **s, char *filename, int status)
+int _customexit(char **s, char *filename, int stat)
 {
-int status;
+int stat;
 if (s[1] != NULL)
 {
 status = _atoi(s[1]);
@@ -28,7 +27,7 @@ int custom_env(void)
 {
 pid_t pid;
 char *file = "env.cs";
-int status;
+int stat;
 char *args[] = {"env", NULL};
 pid = fork();
 if (pid == 0)
@@ -88,7 +87,7 @@ if (!env_name)
 return (-1);
 if (_strcmp(env_name[0], name) == 0)
 {
-name_exists = 1;
+name_existss = 1;
 fount_idx = i;
 free_array(env_name);
 break;
@@ -96,7 +95,7 @@ break;
 free_array(env_name);
 i++;
 }
-if (name_exists)
+if (name_existss)
 {
 if (overwrite)
 return (update_env(name, value, fount_idx));
@@ -111,17 +110,17 @@ return (create_env(name, value, i));
  */
 int _unprepenv(char *name)
 {
-int i = 0, j = 0, name_exists = 0;
+int i = 0, j = 0, name_existss = 0;
 char **env;
 if (!name)
 return (-1);
 while (environ[i])
 if (_strstr(environ[i++], name))
 {
-name_exists = 1;
+name_existss = 1;
 break;
 }
-if (!name_exists)
+if (!name_existss)
 return (0);
 env = malloc(sizeof(char *) * i);
 if (!env)

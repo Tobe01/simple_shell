@@ -9,7 +9,7 @@ char *line;
 char **args;
 int i = 0;
 write(STDOUT_FILENO, "$ ", 3);
-line = _getline();
+line = getline();
 args = parse_line(line);
 free(line);
 if (!args)
