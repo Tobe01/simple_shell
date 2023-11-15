@@ -49,14 +49,14 @@ int _prepenv(char *name, char *value, int overwrite);
 int _unprepenv(char *name);
 /* helper function protoypes */
 void *realloc_(void *ptr, unsigned int old_size, unsigned int new_size);
-char **strtow(char *str, char delim);
-int _strlen(char *s);
+char **strtww(char *str, char delim);
+int _strlnn(char *s);
 void free_array(char **);
 int _strstr(char *hay, const char *needle);
 char *_getenv(char *name);
 int _strcmp(const char *s1, char *s2);
-char *_strcat(char *dest, char *src);
-char *_strcpy(char *dest, char *src);
+char *_strcatt(char *dest, char *src);
+char *_strcpyy(char *dest, char *src);
 int _atoi(char *s);
 char *_strdup(char *str);
 char *convert_unsigned_int(unsigned int num);
