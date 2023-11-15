@@ -42,13 +42,13 @@ int handle_semi(char *line, char *filename, int status);
 int handle_and(char *line, char *filename, int status);
 int handle_or(char *line, char *filename, int status);
 /* fucntion templates for builtin*/
-int exit_shell(char **, char *, int);
-int shell_env(void);
-int shell_echo(char **arg);
+int customexit(char **, char *, int);
+int custom_env(void);
+int custom_echo(char **arg);
 int check_for_builtin(char **args, char *, int);
-int change_dir(char *path, char *filename);
-int _setenv(char *name, char *value, int overwrite);
-int _unsetenv(char *name);
+int change_directory(char *path, char *filename);
+int _prepenv(char *name, char *value, int overwrite);
+int _unprepenv(char *name);
 /* helper function protoypes*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char **strtow(char *str, char delim);
@@ -71,10 +71,10 @@ int update_env(char *name, char *value, int fount_idx);
 int create_env(char *name, char *value, int size);
 char *__strstr(char *hay, char *needle);
 /** linked list functions */
-void insertNode(dir_node **head, char *dir);
-dir_node *create_node(char *dir);
+void insertNode(lst_node **head, char *lst);
+lst_node *add_node(char *lst);
 void free_list(dir_node *head);
-char *check_path(dir_node *head, char *args);
+char *check_path(lst_node *head, char *args);
 char *check_for_access(char *args);
 /* file handlers*/
 int handle_file(char *filename, char *program_name);
